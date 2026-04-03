@@ -1,4 +1,7 @@
 # Sonal Shukla CS23176
+""" Aim: Make use of A STAR Algorithm to find out goal state (Shortest path cost) in the given Graph. 
+    Make use of Breadth First Search algorithm to find the goal state in the above graph and compare the performance of both algorithms 
+    in terms of time taken."""
 
 graph = {
     'A': {'B': 1, 'C': 3},
