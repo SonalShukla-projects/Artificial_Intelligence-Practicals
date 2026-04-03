@@ -1,0 +1,246 @@
+:root {
+  --bg: #f6f7fb;
+  --panel: #ffffff;
+  --ink: #1c1c1c;
+  --muted: #6e6e6e;
+  --accent: #2d8cff;
+  --bot-primary: #ffffff;
+  --bot-secondary: #f0f3f9;
+  --bot-accent: #4b7cff;
+  --bot-outline: #1c1c1c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+.wrap {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  gap: 24px;
+  padding: 24px;
+}
+
+.robot {
+  display: grid;
+  place-items: center;
+  gap: 6px;
+}
+
+.chatbox {
+  position: relative;
+  z-index: 1;
+}
+
+.robot-headset {
+  width: 220px;
+  height: 200px;
+  display: grid;
+  place-items: center;
+  margin-bottom: -52px;
+  z-index: 2;
+}
+
+.robot-headset .shell {
+  width: 200px;
+  height: 170px;
+  background: #e9f0f7;
+  border-radius: 48% 48% 52% 52%;
+  border: 6px solid #d7dee8;
+  position: relative;
+  box-shadow: 0 10px 0 rgba(0, 0, 0, 0.05);
+}
+
+.robot-headset .screen {
+  position: absolute;
+  top: 34px;
+  left: 28px;
+  right: 28px;
+  height: 92px;
+  background: #1e2f33;
+  border-radius: 40% 40% 46% 46%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+}
+
+.robot-headset .eye {
+  width: 18px;
+  height: 28px;
+  background: #47d3ff;
+  border-radius: 999px;
+}
+
+.robot-headset .mouth {
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 8px;
+  background: #47d3ff;
+  border-radius: 999px;
+}
+
+.robot-headset .ear {
+  position: absolute;
+  top: 58px;
+  width: 22px;
+  height: 44px;
+  background: #8f9aa5;
+  border-radius: 12px;
+}
+
+.robot-headset .ear.left {
+  left: -18px;
+}
+
+.robot-headset .ear.right {
+  right: -18px;
+}
+
+.robot-headset .mic {
+  position: absolute;
+  left: 12px;
+  bottom: 24px;
+  width: 86px;
+  height: 8px;
+  background: #2b3a3e;
+  border-radius: 999px;
+  transform: rotate(12deg);
+}
+
+.robot-headset .mic::after {
+  content: "";
+  position: absolute;
+  right: -6px;
+  top: -3px;
+  width: 16px;
+  height: 16px;
+  background: #2b3a3e;
+  border-radius: 50%;
+}
+
+
+.robot-mini .antenna {
+  width: 4px;
+  height: 18px;
+  background: var(--bot-outline);
+  border-radius: 999px;
+  position: relative;
+}
+
+.robot-mini .antenna::after {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  background: var(--bot-accent);
+  border-radius: 50%;
+}
+
+.robot-mini .head {
+  width: 72px;
+  height: 56px;
+  background: var(--bot-primary);
+  border: 2px solid var(--bot-outline);
+  border-radius: 14px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  position: relative;
+}
+
+.robot-mini .eye {
+  width: 12px;
+  height: 12px;
+  background: var(--bot-accent);
+  border-radius: 50%;
+}
+
+.robot-mini .mouth {
+  position: absolute;
+  bottom: 10px;
+  width: 28px;
+  height: 4px;
+  background: var(--bot-outline);
+  border-radius: 999px;
+}
+
+.chatbox {
+  width: min(520px, 92vw);
+  background: var(--panel);
+  border: 2px solid var(--ink);
+  border-radius: 16px;
+  padding: 18px;
+}
+
+.chatbox h1 {
+  margin: 0 0 12px;
+  font-size: 1.4rem;
+}
+
+.chat-window {
+  height: 260px;
+  border: 1px solid #dcdcdc;
+  border-radius: 12px;
+  padding: 12px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #fafafa;
+}
+
+.bubble {
+  max-width: 85%;
+  padding: 10px 12px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+}
+
+.user {
+  align-self: flex-end;
+  background: var(--accent);
+  color: white;
+}
+
+.bot {
+  align-self: flex-start;
+  background: #e9eef8;
+  color: #1d2b3a;
+}
+
+.chat-form {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+}
+
+.chat-form input {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #d0d0d0;
+}
+
+.chat-form button {
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: none;
+  background: var(--accent);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}

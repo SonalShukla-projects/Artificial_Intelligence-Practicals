@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chatbot</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <main class="page">
+    <div class="robot robot-headset" aria-hidden="true">
+      <div class="shell">
+        <div class="screen">
+          <div class="eye left"></div>
+          <div class="eye right"></div>
+          <div class="mouth"></div>
+        </div>
+        <div class="mic"></div>
+        <div class="ear left"></div>
+        <div class="ear right"></div>
+      </div>
+    </div>
+
+    <section class="chatbox">
+      <h1>Chatbot</h1>
+      <div id="chatWindow" class="chat-window" aria-live="polite"></div>
+      <form id="chatForm" class="chat-form" autocomplete="off">
+        <input id="userInput" type="text" placeholder="Type your question..." required />
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
